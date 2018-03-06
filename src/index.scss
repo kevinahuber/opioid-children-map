@@ -1,0 +1,21 @@
+@import '~normalize.css/normalize.css';
+@import 'variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fbf0ee;
+  color: $black;
+  margin: 48px;
+
+  @media (max-width: 550px) {
+    margin: 20px 1rem;
+  }
+}
+
+header {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+}

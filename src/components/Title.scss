@@ -1,0 +1,4 @@
+@import '../mixins';
+.oom-title {
+  @include title;
+}

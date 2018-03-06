@@ -1,0 +1,112 @@
+@import '../mixins';
+
+$caret-size: 15px;
+
+:export {
+  primary: $orange;
+  secondary: $blue;
+  tertiary: $white;
+  empty: $grey-stripes;
+}
+.oom-key {
+  @include tablet-up {
+    margin-left: $large-space;
+    display: inline-block;
+  }
+
+  &__values {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &__fade {
+    transition-property: opacity;
+
+    // &-enter,
+    // &-appear {
+    //   opacity: 0;
+    //   @include transition-in;
+    // }
+    //
+    // &-enter-active,
+    // &-appear-active {
+    //   opacity: 1;
+    // }
+    //
+    // &-exit {
+    //   opacity: 1;
+    //   @include transition-out;
+    // }
+    //
+    // &-exit-active {
+    //   opacity: 0;
+    // }
+  }
+
+  &__block {
+    height: 20px;
+    width: 50px;
+    border: solid 1px $border-color;
+    cursor: pointer;
+    &:not(:first-child) {
+      border-top: none;
+    }
+    @include tablet-up {
+      height: 35px;
+      width: 20px;
+    }
+
+    &--no-data {
+      position: relative;
+      margin-top: $medium-space;
+      border-top: solid 1px $border-color !important;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzEnLz4KPC9zdmc+Cg==');
+      background-repeat: repeat;
+    }
+  }
+
+  &__values--full-data &__block {
+    @include tablet-up {
+      height: 40px;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    margin-top: $caret-size / -2;
+    left: 55px;
+    width: 250px;
+
+    @include tablet-up {
+      left: 25px;
+    }
+
+    &--average {
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    &-graticule {
+      width: 90px;
+      border-top: dashed 1px $border-color;
+      display: inline-block;
+      margin-bottom: 6.5px;
+    }
+    &-caret {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7.5px 0 7.5px 10px;
+      border-color: transparent transparent transparent $border-color;
+      display: inline-block;
+    }
+
+    &-label {
+      font-family: $title-font;
+      display: inline-block;
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: $pink;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '../mixins';
+
+.oom-section {
+  &__container {
+    position: relative;
+  }
+
+  transition: all 200ms linear;
+
+  &--expanded {
+    opacity: 0.5;
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  display: inline-block;
+  width: 100%;
+}

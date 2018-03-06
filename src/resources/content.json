@@ -1,0 +1,42 @@
+{
+  "Nas": {
+    "title": "Neonatal Abstinence Syndrome (NAS) Hospitalizations",
+    "subtitle": "per 1,000 livebirths (2011 - 2015)",
+    "sources": [
+      {
+        "label": "National Neonatal Abstinence Syndrome Rates",
+        "url": "https://www.cdc.gov/mmwr/volumes/65/wr/mm6531a2.htm"
+      },
+      {
+        "label": "Ohio County Neonatal Abstinence Syndrome Rates",
+        "url":
+          "https://www.odh.ohio.gov/-/media/ODH/ASSETS/Files/health/injury-prevention/NAS-Rate.pdf?la=en"
+      }
+    ]
+  },
+  "Opioid": {
+    "title": "Unintentional Drug Overdose Deaths",
+    "subtitle": "per 100,000 people (2010 - 2016)",
+    "sources": [
+      {
+        "label": "Ohio Overdose Death Rates",
+        "url": "http://publicapps.odh.ohio.gov/EDW/DataBrowser/Browse/Mortality"
+      },
+      {
+        "label": "National Overdose Death Rates",
+        "url": "https://www.cdc.gov/mmwr/volumes/65/wr/mm655051e1.htm"
+      }
+    ]
+  },
+  "Foster": {
+    "title": "Children in Foster Care",
+    "subtitle": "per 1,000 children (2015)",
+    "sources": [
+      {
+        "label": "Foster Care Rates",
+        "url":
+          "http://datacenter.kidscount.org/data/tables/2488-children-in-foster-substitute-care?loc=37&loct=5#detailed/5/5178-5265/false/573,869,36,868,867/any/10245,15678"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+@import '../mixins';
+:export {
+  primary: $orange;
+  secondary: $blue;
+  tertiary: $white;
+  empty: $grey-stripes;
+  border: $border-color;
+}
+.oom-map {
+  position: relative;
+  &__map {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__warning--no-counties {
+    position: absolute;
+    top: 40%;
+    @include title;
+    text-align: center;
+    width: 100%;
+  }
+  &__tooltip {
+    &-positive,
+    &-negative,
+    &-neutral {
+      margin-left: 5px;
+      text-align: right;
+      &:after {
+        content: ')';
+      }
+    }
+    &-positive {
+      color: $orange;
+      &:before {
+        content: '(+';
+      }
+    }
+
+    &-negative {
+      color: $blue;
+      &:before {
+        content: '(';
+      }
+    }
+
+    &-neutral {
+      color: $grey;
+      &:before {
+        content: '(';
+      }
+    }
+    // This is alllll a bunch of hacks
+    background: $white !important;
+    border-radius: 0 !important;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+    &-content {
+      font-family: $title-font;
+      font-size: 0.75rem !important;
+      font-weight: 100 !important;
+      text-align: left;
+    }
+
+    &-arrow span {
+      border: none !important;
+    }
+  }
+}

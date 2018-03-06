@@ -1,0 +1,116 @@
+@import 'variables';
+
+@mixin title {
+  font-size: 24px;
+  line-height: 30px;
+  font-family: $title-font;
+}
+
+@mixin subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: $title-font;
+  font-weight: 100;
+  margin-bottom: $medium-space;
+}
+
+@mixin paragraph {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: $paragraph-font;
+}
+
+@mixin body {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-family: $title-font;
+}
+
+@mixin resize {
+  transition-property: max-width;
+  @include transition-in;
+}
+
+@mixin transition-in {
+  transition-duration: 225ms;
+  transition-timing-function: ease-in-out;
+  @include tablet-up {
+    transition-duration: 295ms;
+  }
+
+  @include desktop-up {
+    transition-duration: 200ms;
+  }
+}
+
+@mixin animation-in {
+  animation-duration: 225ms;
+  animation-timing-function: ease-in-out;
+  @include tablet-up {
+    animation-duration: 295ms;
+  }
+
+  @include desktop-up {
+    animation-duration: 200ms;
+  }
+}
+
+@mixin transition-out {
+  transition-duration: 195ms;
+  transition-timing-function: ease-in-out;
+  @include tablet-up {
+    transition-duration: 250ms;
+  }
+
+  @include desktop-up {
+    transition-duration: 175ms;
+  }
+}
+
+@mixin mobile-only {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$widescreen-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin widescreen-up {
+  @media (min-width: #{$widescreen-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+  @media (max-width: #{$widescreen-width - 1px}) {
+    @content;
+  }
+}

@@ -1,0 +1,6 @@
+@import '../mixins';
+
+.oom-subtitle {
+  @include subtitle;
+  margin-top: 5px;
+}
